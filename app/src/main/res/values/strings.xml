@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Charades</string>
+    <string name="placeholder">Card Title</string>
+    <string name="points" translatable="false">5</string>
+    <string name="categoryPlaceholder">Celebrities/Characters</string>
+    <string name="cardNbr" translatable="false">999</string>
+    <string name="seconds" translatable="false">60s</string>
+    <string name="team1">Team 1</string>
+    <string name="start">Start</string>
+    <string name="descriptionPlaceholder"> Albert Einstein was a German-born theoretical physicist, best known for developing the theory of relativity, but he also made important contributions to the development of the theory of quantum mechanics.</string>
+    <string name="nextPlayer">Handle phone to the other group</string>
+    <string name="nbrCards">Chosse Number of Cards:</string>
+    <string name="phase">Phase: </string>
+    <string name="team2">Team 2</string>
+    <string name="gameOver" translatable="false">Game Over</string>
+    <string name="winning">Winning team:</string>
+    <string name="restart">Restart Game</string>
+    <string name="tie">Tie!</string>
+    <string name="example">Example</string>
+
+    <!-- Descriptions for accessibility -->
+
+    <string name="questionMark">Question mark image, symbol of the app</string>
+    <string name="startButton">Starts the game</string>
+    <string name="cornerSymbol">Corner symbol that represents the category of the card</string>
+    <string name="clock">Icon of a timer</string>
+
+
+    <!-- Instructions -->
+    <string name="instructions">
+        instructions
+<!--                Divide yourselves in two teams.-->
+<!--<br/>-->
+<!--                <br/>The goal is for your teammates to correctly guess as many-->
+<!--                cards as you can possibly describe in 60 seconds.-->
+<!--<br/>-->
+<!--                <br/>There are three phases (each with the same cards):-->
+<!--<br/>-->
+<!--                <br/>Phase 1: You can use any amount of words, sounds and gestures, as long as you don't say any of the words-->
+<!--                in the card's title.-->
+<!--<br/>-->
+<!--                <br/>Phase 2: You can only use one word to describe them (again, none of the words in the card's title)-->
+<!--<br/>-->
+<!--                <br/>Phase 3: You can only do charades. No sound, no words, just gestures.-->
+<!--<br/>-->
+<!--                <br/>Swipe right for correctly guessed cards, swipe left to skip or for mistakes.-->
+<!--<br/>-->
+<!--                <br/>The game will keep track of who wins.-->
+    </string>
+
+</resources>

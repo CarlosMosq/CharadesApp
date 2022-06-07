@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_blue">#151D3B</color>
+    <color name="red">#D82148</color>
+    <color name="green">#6EBF8B</color>
+    <color name="grey">#DADBBD</color>
+    <color name="grey_blue">#203239</color>
+    <color name="icy_white">#F7F7F7</color>
+    
+    
+    <!-- Points color scheme -->
+    <color name="game_blue">#61A4BC</color>
+    <color name="game_green">#5F7464</color>
+    <color name="game_red">#C74B50</color>
+    <color name="game_purple">#46244C</color>
+    
+</resources>
