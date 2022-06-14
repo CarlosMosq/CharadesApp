@@ -25,7 +25,7 @@
             android:id="@+id/gameOver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:text="@string/gameOver"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="48sp"
@@ -37,7 +37,7 @@
             android:id="@+id/winning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:text="@string/winning"
             android:textColor="?attr/colorOnSecondary"
             android:textSize="34sp"
@@ -45,65 +45,80 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gameOver" />
 
-        <TextView
-            android:id="@+id/winningTeam"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/example"
-            android:textColor="?attr/colorOnSecondary"
-            android:textSize="48sp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/winning" />
+            app:layout_constraintTop_toBottomOf="@+id/winning">
 
-        <TextView
-            android:id="@+id/winningTeamPoints"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="@string/example"
-            android:textColor="?attr/colorOnSecondary"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/winningTeam" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/losingTeam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="@string/example"
-            android:textColor="?attr/colorOnSecondary"
-            android:textSize="42sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/winningTeamPoints" />
+                <TextView
+                    android:id="@+id/winningTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/example"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="42sp" />
 
-        <TextView
-            android:id="@+id/losingTeamPoints"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="@string/example"
-            android:textColor="?attr/colorOnSecondary"
+                <TextView
+                    android:id="@+id/winningTeamPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/example"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="24sp" />
+            </LinearLayout>
 
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/losingTeam" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/losingTeam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/example"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="42sp" />
+
+                <TextView
+                    android:id="@+id/losingTeamPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/example"
+                    android:textColor="?attr/colorOnSecondary"
+
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/restartButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:text="@string/restart"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/losingTeamPoints" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

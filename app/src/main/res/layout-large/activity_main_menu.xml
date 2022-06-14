@@ -60,7 +60,6 @@
                     android:inputType="none"
                     android:paddingStart="15dp"
                     android:paddingEnd="15dp"
-                    android:textColor="?attr/colorOnSecondary"
                     android:textSize="16sp"
                     tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>

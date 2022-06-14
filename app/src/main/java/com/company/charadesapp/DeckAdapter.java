@@ -39,7 +39,11 @@ public class DeckAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_model, viewGroup, false);
+        if(view == null) {
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_model
+                    , viewGroup
+                    , false);
+        }
 
         LinearLayout topBar, bottomBar;
         TextView topPoints, bottomPoints, cardTitle, descriptionText, category, cardNbr;
@@ -57,12 +61,16 @@ public class DeckAdapter extends BaseAdapter {
         bottomCorner = view.findViewById(R.id.bottomCorner);
 
         CompletableFuture.runAsync(() -> {
-            topBar.setBackgroundColor(returnColor(list.get(i).getPoints()));
-            bottomBar.setBackgroundColor(returnColor(list.get(i).getPoints()));
+            topBar.setBackgroundColor(topBar.getContext().getColor(returnColor(list.get(i).getPoints())));
+            bottomBar.setBackgroundColor(bottomBar.getContext().getColor(returnColor(list.get(i).getPoints())));
             topPoints.setText(list.get(i).getPoints());
+            topPoints.setTextColor(topPoints.getContext().getColor(returnColor(list.get(i).getPoints())));
             bottomPoints.setText(list.get(i).getPoints());
+            bottomPoints.setTextColor(bottomPoints.getContext().getColor(returnColor(list.get(i).getPoints())));
             cardTitle.setText(list.get(i).getTitle());
+            cardTitle.setTextColor(cardTitle.getContext().getColor(returnColor(list.get(i).getPoints())));
             descriptionText.setText(list.get(i).getDescription());
+            descriptionText.setTextColor(descriptionText.getContext().getColor(returnColor(list.get(i).getPoints())));
             category.setText(list.get(i).getCategory());
             cardNbr.setText(list.get(i).getItem());
             topCorner.setImageResource(returnCategoryImg(list.get(i).getCategory()));
@@ -74,11 +82,18 @@ public class DeckAdapter extends BaseAdapter {
 
     private int returnCategoryImg(String category) {
         switch (category) {
-            case "Memes" : return R.drawable.ic_losango;
-            case "Celebridades/Personagens" : return R.drawable.ic_heart;
-            case "Figuras Históricas" : return R.drawable.ic_spades;
-            case "País" : return R.drawable.ic_clubs;
-            case "Qualquer Coisa" : return R.drawable.ic_outline_diamond_24;
+            case "Celebridades/Personagens" :
+            case "Celebrities/Characters" :
+                return R.drawable.ic_heart;
+            case "Historical Figures" :
+            case "Figuras Históricas" :
+                return R.drawable.ic_spades;
+            case "Country" :
+            case "País" :
+                return R.drawable.ic_clubs;
+            case "Anything" :
+            case "Qualquer Coisa" :
+                return R.drawable.ic_outline_diamond_24;
             default: return R.drawable.ic_losango;
         }
     }

@@ -8,22 +8,15 @@
     <string name="startButton">Inicia o jogo</string>
     <string name="cornerSymbol">Símbolo de canto, que representa a categoria da carta</string>
     <string name="clock">Ícone de um relógio</string>
-    <string name="instructions">instruções
-<!--    Divida-se em dois times.-->
-<!--<br/>-->
-<!--                <br/>O objetivo é que seu time adivinhe corretamente o maior número de cartas possível em 60 segundos.-->
-<!--<br/>-->
-<!--                <br/>O jogo tem três fases (cada uma com as mesmas cartas):-->
-<!--<br/>-->
-<!--                <br/>Fase 1: Você pode utilizar quantas palavras, sons e gestos quiser, desde que não use nenhuma das palavras no título das cartas.-->
-<!--<br/>-->
-<!--                <br/>Fase 2: Você deve utilizar somente uma palavra pra descrever a carta (novamente, sem usar as palavras da carta).-->
-<!--<br/>-->
-<!--                <br/>Fase 3: Hora da mímica. Sem sons, sem palavras, só gestos.-->
-<!--<br/>-->
-<!--                <br/>Deslize para a direita se acertar a carta, para a esquerda se errar ou para pular.-->
-<!--<br/>-->
-<!--                <br/>O jogo calculará quem venceu.    -->
+    <string name="instructions">"Divida-se em dois times.
+
+    O objetivo é que seu time adivinhe corretamente o maior número de cartas possível em 60 segundos.
+    O jogo tem três fases (cada uma com as mesmas cartas):
+    -Fase 1: Você pode utilizar quantas palavras, sons e gestos quiser, desde que não use nenhuma das palavras no título das cartas.
+    -Fase 2: Você deve utilizar somente uma palavra pra descrever a carta (novamente, sem usar as palavras da carta).
+    -Fase 3: Hora da mímica. Sem sons, sem palavras, só gestos.
+
+    Deslize para a direita se acertar a carta, para a esquerda se errar ou para pular."
     </string>
     <string name="descriptionPlaceholder">Físico teórico alemão que desenvolveu a teoria da relatividade geral, um dos pilares da física moderna ao lado da mecânica quântica</string>
     <string name="nextPlayer">Passe o celular para o outro grupo</string>
@@ -35,4 +28,6 @@
     <string name="restart">Recomeçar Jogo</string>
     <string name="tie">Empate!</string>
     <string name="example">Exemplo</string>
+    <string name="pointsText">pontos</string>
+    <string name="gitHub">CarlosMosq/Game-Cards/main/cards_portuguese.json</string>
 </resources>

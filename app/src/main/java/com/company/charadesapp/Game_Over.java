@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Game_Over extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,10 +28,15 @@ public class Game_Over extends AppCompatActivity {
         }
 
         winningTeam.setText(winner);
-        winningTeamPoints.setText(getIntent().getStringExtra("winnerPoints"));
+        winningTeamPoints.setText(String.format("%s %s"
+                , getIntent().getIntExtra("winnerPoints", 0)
+                , getString(R.string.pointsText)));
         losingTeam.setText(getIntent().getStringExtra("loser"));
-        losingTeamPoints.setText(getIntent().getStringExtra("loserPoints"));
+        losingTeamPoints.setText(String.format("%s %s"
+                , getIntent().getIntExtra("loserPoints", 0)
+                , getString(R.string.pointsText)));
 
+        //sends user back to main menu to restart game if it's their desire;
         restartButton.setOnClickListener(view -> {
             Intent i = new Intent(Game_Over.this, MainMenu.class);
             startActivity(i);

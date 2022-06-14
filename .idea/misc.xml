@@ -8,11 +8,44 @@
         <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/drawable-v24/ic_losango.xml" value="0.1" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/drawable-v24/ic_mono_question_mark.xml" value="0.1" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/drawable/round_corners.xml" value="0.1" />
-        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/activity_game_over.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-land/activity_game_over.xml" value="0.22" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-land/activity_game_play.xml" value="0.1953125" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-land/activity_main.xml" value="0.1953125" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-land/activity_main_menu.xml" value="0.5" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-land/activity_waiting.xml" value="0.1953125" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-land/card_model.xml" value="0.25" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large-land/activity_game_over.xml" value="0.1953125" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large-land/activity_game_play.xml" value="0.1953125" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large-land/activity_main.xml" value="0.1953125" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large-land/activity_main_menu.xml" value="0.33" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large-land/activity_waiting.xml" value="0.1953125" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large-land/card_model.xml" value="0.1953125" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large/activity_game_over.xml" value="0.22" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large/activity_game_play.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large/activity_main_menu.xml" value="0.33" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large/activity_waiting.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-large/card_model.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small-land/activity_game_over.xml" value="0.9" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small-land/activity_game_play.xml" value="0.9" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small-land/activity_main.xml" value="0.9" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small-land/activity_main_menu.xml" value="1.0" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small-land/activity_waiting.xml" value="0.75" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small-land/card_model.xml" value="1.1" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small/activity_game_over.xml" value="0.9" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small/activity_game_play.xml" value="1.0" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small/activity_main.xml" value="0.9" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small/activity_main_menu.xml" value="1.0" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small/activity_waiting.xml" value="0.9" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-small/card_model.xml" value="1.0" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-sw600dp/activity_game_over.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-sw600dp/activity_game_play.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout-sw600dp/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/activity_game_over.xml" value="0.25" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/activity_game_play.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/activity_main_menu.xml" value="0.33" />
-        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/activity_waiting.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/activity_main_menu.xml" value="0.22" />
+        <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/activity_waiting.xml" value="0.25" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/card_dropdown.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/card_instructions.xml" value="0.25" />
         <entry key="..\:/Users/carlo/AndroidStudioProjects/CharadesApp/app/src/main/res/layout/card_model.xml" value="0.29983792544570503" />

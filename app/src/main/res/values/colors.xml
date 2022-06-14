@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dark_blue">#151D3B</color>
-    <color name="red">#D82148</color>
-    <color name="green">#6EBF8B</color>
-    <color name="grey">#DADBBD</color>
-    <color name="grey_blue">#203239</color>
+    <!-- Primary Colors and Variants -->
+    <color name="dark_blue">#243A73</color>
+    <color name="grey_blue">#485b8c</color>
+    <color name="light_purple">#bf8cfc</color>
+    <color name="dark_purple">#9351e3</color>
+
+    <!-- Secondary Colors and Variants -->
+    <color name="red">#73242f</color>
+    <color name="light_red">#8c4851</color>
+    <color name="light_green">#04dcc9</color>
+    <color name="darker_green">#2bc2b5</color>
+
+    <!-- onPrimary and onSecondary colors -->
+    <color name="grey">#212121</color>
     <color name="icy_white">#F7F7F7</color>
-    
+
+    <!-- Background Colors -->
+    <color name="green">#a5ccb3</color>
+    <color name="black">#000000</color>
     
     <!-- Points color scheme -->
     <color name="game_blue">#61A4BC</color>

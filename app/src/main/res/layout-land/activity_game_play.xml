@@ -35,7 +35,8 @@
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
-        android:background="?attr/backgroundColor"
+        android:background="@color/icy_white"
+        android:backgroundTint="?attr/backgroundColor"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 

@@ -2,6 +2,7 @@ package com.company.charadesapp;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.TextView;
@@ -25,8 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class GamePlay extends AppCompatActivity {
     private SwipeDeck swipeDeck;
     TextView team1, team2, secondsOnTimer, phaseTextView;
-    int pointsTeam1, pointsTeam2, winnerPoints, loserPoints;
-    int cardCount = Integer.parseInt(getIntent().getStringExtra("nbrOfCards"));
+    int pointsTeam1, pointsTeam2, winnerPoints, loserPoints, cardCount;
     boolean currentTeam = true;
     int currentPhase = 1;
     String winner, loser;
@@ -35,30 +35,21 @@ public class GamePlay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_play);
-
+        cardCount = Integer.parseInt(getIntent().getStringExtra("nbrOfCards"));
         team1 = findViewById(R.id.teamID);
         team2 = findViewById(R.id.teamID2);
         phaseTextView = findViewById(R.id.phase);
         secondsOnTimer = findViewById(R.id.seconds);
+        swipeDeck = findViewById(R.id.swipeDeck);
+
         adjustTextViews();
         countDown();
-
-        swipeDeck = findViewById(R.id.swipeDeck);
-        callRetrofit(data -> {
-            Collections.shuffle(data);
-            List<ModelClassCard> deckForUse = data.subList(0, cardCount);
-            setUpDeck(deckForUse, currentPhase);
-        });
-
+        setUpDeck(currentPhase);
 //end of onCreate()
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    private void callRetrofit(onCardListLoaded onCardListLoaded) {
+    //Uses retrofit to call the list of cards from GitHub
+    private void callRetrofit(CardListLoadable CardListLoadable) {
         CompletableFuture.runAsync(() -> {
             Retrofit retrofit = new Retrofit
                     .Builder()
@@ -68,15 +59,18 @@ public class GamePlay extends AppCompatActivity {
 
             RetrofitAPICard retrofitAPICard = retrofit.create(RetrofitAPICard.class);
 
-            Call<List<ModelClassCard>> call = retrofitAPICard.getModelClass();
+            Call<List<ModelClassCard>> call = retrofitAPICard
+                    .getModelClass(getString(R.string.gitHub));
             call.enqueue(new Callback<List<ModelClassCard>>() {
                 @Override
-                public void onResponse(@NonNull Call<List<ModelClassCard>> call, @NonNull Response<List<ModelClassCard>> response) {
-                    onCardListLoaded.onCardListLoaded(response.body());
+                public void onResponse(@NonNull Call<List<ModelClassCard>> call
+                        , @NonNull Response<List<ModelClassCard>> response) {
+                    CardListLoadable.onCardListLoaded(response.body());
                 }
 
                 @Override
-                public void onFailure(@NonNull Call<List<ModelClassCard>> call, @NonNull Throwable t) {
+                public void onFailure(@NonNull Call<List<ModelClassCard>> call
+                        , @NonNull Throwable t) {
 
                 }
             });
@@ -84,26 +78,28 @@ public class GamePlay extends AppCompatActivity {
 //end of callRetrofit()
     }
 
-    private void setUpDeck(List<ModelClassCard> list, int phase) {
-        CompletableFuture.runAsync(() -> {
+    //Set up deck of cards and loads the deck to the appropriate view;
+    private void setUpDeck(int phase) {
+        callRetrofit(data -> {
+            Collections.shuffle(data);
+            List<ModelClassCard> deckForUse = data.subList(0, cardCount);
             phaseTextView.setText(String.format("%s %s", getString(R.string.phase), phase));
-            DeckAdapter deckAdapter = new DeckAdapter(list, getApplicationContext());
+            DeckAdapter deckAdapter = new DeckAdapter(deckForUse, getApplicationContext());
             swipeDeck.setAdapter(deckAdapter);
             swipeDeck.setEventCallback(new SwipeDeck.SwipeEventCallback() {
                 @Override
                 public void cardSwipedLeft(int position) {
-                    //if card is swiped left, card was not guessed, so it returns to the end of the deck
-                    list.add(list.get(position));
-                    //put cards on shared preferences?
+                /*if card is swiped left, card was not guessed, so it returns to the end of
+                the deck*/
+                    deckForUse.add(deckForUse.get(position));
                 }
 
                 @Override
                 public void cardSwipedRight(int position) {
-                    //add cards to a second list to be used on next round?
                     if (currentTeam) {
-                        pointsTeam1++;
+                        pointsTeam1 += Integer.parseInt(deckForUse.get(position).getPoints());
                     } else {
-                        pointsTeam2++;
+                        pointsTeam2 += Integer.parseInt(deckForUse.get(position).getPoints());
                     }
                     adjustTextViews();
                 }
@@ -112,8 +108,11 @@ public class GamePlay extends AppCompatActivity {
                 public void cardsDepleted() {
                     if(currentPhase < 3) {
                         currentPhase++;
-                        Collections.shuffle(list);
-                        setUpDeck(list, phase);
+                        DeckAdapter deckAdapter = new DeckAdapter(deckForUse, getApplicationContext());
+                        swipeDeck.setAdapter(deckAdapter);
+                        phaseTextView.setText(String.format("%s %s"
+                                , getString(R.string.phase)
+                                , currentPhase));
                     }
                     else {
                         if (pointsTeam1 > pointsTeam2) {
@@ -145,7 +144,7 @@ public class GamePlay extends AppCompatActivity {
 
                 @Override
                 public void cardActionDown() {
-                    //check what is happening to cards
+
                 }
 
                 @Override
@@ -156,7 +155,8 @@ public class GamePlay extends AppCompatActivity {
         });
     }
 
-    //responsible for the clock on the bottom of the page and for calling the adjustment of the current player
+    /*Responsible for the clock on the bottom of the page and for calling the adjustment of
+    the current player*/
     private void countDown() {
         new CountDownTimer(60000, 1000) {
             @Override
@@ -167,7 +167,10 @@ public class GamePlay extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                Toast.makeText(GamePlay.this, getText(R.string.nextPlayer), Toast.LENGTH_SHORT).show();
+                playSound(R.raw.error);
+                Toast.makeText(GamePlay.this
+                        , getText(R.string.nextPlayer)
+                        , Toast.LENGTH_SHORT).show();
                 currentTeam = !currentTeam;
                 adjustTextViews();
                 countDownForTeamSwitch();
@@ -175,10 +178,12 @@ public class GamePlay extends AppCompatActivity {
         }.start();
     }
 
+    //Clock for 5s to allow the user to handle the phone to another player;
     private void countDownForTeamSwitch() {
-        new CountDownTimer(5000, 1000) {
+        new CountDownTimer(6000, 1000) {
             @Override
             public void onTick(long l) {
+                playSound(R.raw.seconds);
                 secondsOnTimer.setText(String.format("%ss", l/1000));
                 secondsOnTimer.setTypeface(Typeface.DEFAULT_BOLD);
             }
@@ -190,6 +195,14 @@ public class GamePlay extends AppCompatActivity {
         }.start();
     }
 
+    private void playSound(int sound) {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, sound);
+        mediaPlayer.start();
+        mediaPlayer.setOnCompletionListener(MediaPlayer::release);
+    }
+
+    /*Adjust color of the current player to green and bold and the other player to red and default
+    style*/
     private void adjustTextViews() {
         team1.setText(String.format("%s: %s", getString(R.string.team1), pointsTeam1));
         team2.setText(String.format("%s: %s", getString(R.string.team2), pointsTeam2));
@@ -207,6 +220,5 @@ public class GamePlay extends AppCompatActivity {
             team2.setTypeface(Typeface.DEFAULT_BOLD);
         }
     }
-
 
 }

@@ -19,6 +19,8 @@
     <string name="restart">Restart Game</string>
     <string name="tie">Tie!</string>
     <string name="example">Example</string>
+    <string name="pointsText">points</string>
+    <string name="gitHub">/CarlosMosq/Game-Cards/main/cards_english.json</string>
 
     <!-- Descriptions for accessibility -->
 
@@ -29,25 +31,15 @@
 
 
     <!-- Instructions -->
-    <string name="instructions">
-        instructions
-<!--                Divide yourselves in two teams.-->
-<!--<br/>-->
-<!--                <br/>The goal is for your teammates to correctly guess as many-->
-<!--                cards as you can possibly describe in 60 seconds.-->
-<!--<br/>-->
-<!--                <br/>There are three phases (each with the same cards):-->
-<!--<br/>-->
-<!--                <br/>Phase 1: You can use any amount of words, sounds and gestures, as long as you don't say any of the words-->
-<!--                in the card's title.-->
-<!--<br/>-->
-<!--                <br/>Phase 2: You can only use one word to describe them (again, none of the words in the card's title)-->
-<!--<br/>-->
-<!--                <br/>Phase 3: You can only do charades. No sound, no words, just gestures.-->
-<!--<br/>-->
-<!--                <br/>Swipe right for correctly guessed cards, swipe left to skip or for mistakes.-->
-<!--<br/>-->
-<!--                <br/>The game will keep track of who wins.-->
+    <string name="instructions">"Divide yourselves in two teams.
+
+    The goal is for your teammates to correctly guess as many cards as you can possibly describe in 60 seconds.
+    There are three phases (each with the same cards):
+    - Phase 1: You can use any amount of words, sounds and gestures, as long as you don't say any of the words in the card's title.
+    - Phase 2: You can only use one word to describe them (again, none of the words in the card's title).
+    - Phase 3: You can only do charades. No sound, no words, just gestures.
+
+    Swipe right for correctly guessed cards, swipe left to skip or for mistakes."
     </string>
 
 </resources>

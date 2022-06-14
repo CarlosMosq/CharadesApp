@@ -25,12 +25,10 @@ public class MainMenu extends AppCompatActivity {
 
         cardCountAdapter = new ArrayAdapter<>(this, R.layout.card_dropdown, cardCountArray);
         cardCount.setAdapter(cardCountAdapter);
-        cardCount.setOnItemClickListener(
-                (adapterView, view, i, l) -> nbrOfCardsToPlay = adapterView
+        cardCount.setOnItemClickListener((adapterView, view, i, l) -> nbrOfCardsToPlay =
+                adapterView
                         .getItemAtPosition(i)
-                        .toString()
-        );
-
+                        .toString());
 
         startButton.setOnClickListener(v -> {
             Intent intentToStart = new Intent(MainMenu.this, WaitingActivity.class);

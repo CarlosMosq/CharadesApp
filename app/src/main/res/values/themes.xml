@@ -1,14 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.CharadesApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Background color. -->
+        <item name="backgroundColor">@color/icy_white</item>
+        <item name="background">@color/green</item>
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/dark_blue</item>
         <item name="colorPrimaryVariant">@color/grey_blue</item>
-        <item name="colorOnPrimary">@color/red</item>
+        <item name="colorOnPrimary">@color/icy_white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/green</item>
-        <item name="colorSecondaryVariant">@color/red</item>
-        <item name="colorOnSecondary">@color/icy_white</item>
+        <item name="colorSecondary">@color/red</item>
+        <item name="colorSecondaryVariant">@color/light_red</item>
+        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
